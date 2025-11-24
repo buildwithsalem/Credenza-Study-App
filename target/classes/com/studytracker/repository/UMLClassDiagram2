@@ -1,0 +1,49 @@
+@startuml
+
+package "Backend (Spring Boot)" {
+
+    class CredenzaApiApplication {
+        + main(String[] args)
+    }
+
+    class Item {
+        - Long id
+        - String name
+        - String description
+        - Double price
+        - Integer quantity
+    }
+
+    interface ItemRepository {
+        + save(Item)
+        + findAll()
+        + findById(Long)
+        + deleteById(Long)
+    }
+
+    class ItemService {
+        - ItemRepository itemRepository
+        + getAllItems(): List<Item>
+        + getItem(Long id): Item
+        + createItem(Item i): Item
+        + updateItem(Long id, Item i): Item
+        + deleteItem(Long id)
+    }
+
+    class ItemController {
+        - ItemService itemService
+        + getItems()
+        + getItem(Long id)
+        + createItem(Item i)
+        + updateItem(Long id, Item i)
+        + deleteItem(Long id)
+    }
+
+    ItemRepository <|-- JpaItemRepository
+    JpaItemRepository ..> Item
+
+    ItemService --> ItemRepository
+    ItemController --> ItemService
+}
+
+@enduml
