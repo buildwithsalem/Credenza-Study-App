@@ -1,0 +1,32 @@
+@startuml
+
+package "Frontend (React)" {
+
+    class App {
+        + render()
+    }
+
+    class ItemList {
+        + items: List
+        + fetchItems()
+        + render()
+    }
+
+    class ItemDetails {
+        + itemId
+        + fetchItem()
+        + render()
+    }
+
+    class ItemForm {
+        + mode: "create" or "edit"
+        + submitForm()
+        + render()
+    }
+
+    App --> ItemList
+    ItemList --> ItemDetails
+    ItemList --> ItemForm
+}
+
+@enduml
