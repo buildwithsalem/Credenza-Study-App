@@ -1,0 +1,9 @@
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/model/StudySession.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/service/StudySessionService.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/service/GoalService.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/repository/GoalRepository.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/repository/StudySessionRepository.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/StudyTrackerApplication.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/controller/StudySessionController.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/model/Goal.java
+/workspaces/Credenza-Study-App/src/main/java/com/studytracker/controller/GoalController.java
